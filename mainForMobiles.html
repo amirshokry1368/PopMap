@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+			<title>Mobiles</title>
+      <style>
+      body
+      {
+       
+
+        font-family: Tajawal;
+     
+      }
+
+      .Logo
+      {
+       padding: 4px 100% 3px 4px;
+       position: fixed;
+       top: 0%;
+       left: 0%;
+       transform: translate(0% , 0%);
+       background-color: #d49a89;
+
+      }
+
+      .MobileLogo
+      {
+
+       padding: 10px;
+       position: fixed;
+       top: 0%;
+       left: 0%;
+       transform: translate(200% , 0%);
+
+
+      }
+   .MobileLogo h1
+   {
+     top: 0%;
+     left: 0%;
+     transform: translate(65% , -220%);
+     text-shadow: -10px 10px 15px;
+     color: #557571;
+   }
+   .Menu
+   {
+     padding: 0% 10px 100% 10px;
+     position: fixed;
+     top: 0%;
+     left: 0%;
+     text-align: center;
+     transform: translate(0% , 7%);
+     color: #d49a89;
+     background-color: #557571;
+   }
+   .Buttons{
+     padding: 10px 10px 10px 10px;
+     display: block;
+     top: 0%;
+     left: 0%;
+     transform: translate(0px , 0px);
+     text-align: center;
+     color: #d49a89;
+     background-color: #557571;
+     border: 0px;
+     cursor: pointer;
+     font-family: Tajawal;
+     font-size: 24px;
+     font-weight: bold;
+     outline: 0;
+   }
+   table
+   {
+      
+      border-collapse: collapse;
+      width: 88%;
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      transform: translate(160px, 140px);
+   }
+   td
+   {
+      padding-top: 10px;
+      text-align: center;
+   }
+   h3
+   {
+      font-size: 28px;
+      font-weight: bold;
+      margin-top: 0px;
+      margin-bottom: 2px;
+      cursor: pointer;
+   }
+   h4
+   {
+    color: red;
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: -8px;
+   }
+   img
+   {
+    cursor: pointer;
+   }
+
+   .popup .overlay {
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:105.38%;
+  height:111%;
+  background:rgba(0,0,0,0.7);
+  z-index:1;
+  display:none;
+  transform: translate(-5% , -10%);
+}
+
+.popup .content {
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%) scale(0);
+  background:#fff;
+  width:750px;
+  height:600px;
+  z-index:2;
+  text-align:center;
+  padding:20px;
+  box-sizing:border-box;
+  font-family:Tajawal;
+}
+
+.popup .close-btn {
+  cursor:pointer;
+  position:fixed;
+  right:20px;
+  top:20px;
+  width:30px;
+  height:30px;
+  background:#222;
+  color:#fff;
+  font-size:25px;
+  font-weight:600;
+  line-height:30px;
+  text-align:center;
+  border-radius:50%;
+}
+
+.popup.active .overlay {
+  display:block;
+}
+
+.popup.active .content {
+  transition:all 300ms ease-in-out;
+  transform:translate(-50%,-70%) scale(1);
+}
+ul , li
+{
+text-align: left;
+}
+.rotate img{
+
+  transition: all 1.5s ease-in-out;
+
+}
+.rotate img:hover{
+  transform:rotateY(360deg);
+}
+.tstclass
+{
+position: fixed;
+   top: 0%;
+      left: 0%;
+      transform: translate(1050px, 50px);
+      z-index: 3;
+
+}
+  .tstclass input[type="submit"]
+    {
+      font-size: 16px;
+      font-weight: bold;
+      font-family: Tajawal;
+      border: 0;
+      background: none;
+      display: block;
+      margin: 30px auto;
+      text-align: center;
+      border: 2px solid #707070;
+      padding: 3px 0px;
+      width: 90px;
+      outline: none;
+      color: black;
+      border-radius: 30px;
+      transition: 0.25s;
+      cursor: pointer;
+      position: fixed;
+   top: 0%;
+      left: 0%;
+      transform: translate(180px, -36px);
+      z-index: 3;
+     background-color: white;
+
+    }
+.tstclass input[type="submit"]:hover
+    {
+      color: white;
+      border-color: #2ecc71;
+      background-color: #2ecc71;
+    }
+  .tstclass input[type="search"]
+    {
+        border: 0;
+      background: white;
+      display: block;
+      margin: 10px auto;
+      text-align: left;
+      border: 2px solid #707070;
+      padding: 14px;
+      width: 230px;
+      outline: none;
+      color: black;
+      border-radius: 24px;
+      transition: 0.1s;
+      padding-left: 20;
+      position: fixed;
+        top: 0%;
+      left: 0%;
+      transform: translate(-55px, -22px);
+  }
+
+    </style>
+			<script type="text/javascript">
+function togglepopup1()
+{
+
+    document.getElementById("popup-1").classList.toggle("active");
+}
+function togglepopup2()
+{
+   
+    document.getElementById("popup-2").classList.toggle("active");
+}
+function togglepopup3()
+{
+    
+    document.getElementById("popup-3").classList.toggle("active");
+}
+function togglepopup4()
+{
+    
+    document.getElementById("popup-4").classList.toggle("active");
+}
+function togglepopup5()
+{
+   
+    document.getElementById("popup-5").classList.toggle("active");
+}
+function togglepopup6()
+{
+    
+    document.getElementById("popup-6").classList.toggle("active");
+}
+function togglepopup7()
+{
+   
+    document.getElementById("popup-7").classList.toggle("active");
+}
+function togglepopup8()
+{
+  
+    document.getElementById("popup-8").classList.toggle("active");
+}
+function togglepopup9()
+{
+   
+    document.getElementById("popup-9").classList.toggle("active");
+}
+   
+
+    function changeColor(color){
+      document.bgColor=color;
+    }
+
+
+function search() {
+  // body...
+  if (document.getElementById('srchbx').value=="nokia 9 pureview") 
+    {
+      togglepopup1();
+    }
+  else if (document.getElementById('srchbx').value=="huawei y9") 
+    {
+      togglepopup2();
+    }
+  else if (document.getElementById('srchbx').value=="IPhone 11 pro") 
+    {
+      togglepopup3();
+    }
+  else if (document.getElementById('srchbx').value=="lenovo k6") 
+    {
+      togglepopup4();
+    }
+  else if (document.getElementById('srchbx').value=="samsung galaxy A70") 
+    {
+      togglepopup5();
+    }
+  else if (document.getElementById('srchbx').value=="samsung galaxy A20") 
+    {
+      togglepopup6();
+    }
+  else if (document.getElementById('srchbx').value=="Oppo RENO2") 
+    {
+      togglepopup7();
+    }
+  else if (document.getElementById('srchbx').value=="Realme 3 pro") 
+    {
+      togglepopup8();
+    }
+  else if (document.getElementById('srchbx').value=="Realme 6 pro") 
+    {
+      togglepopup9();
+    }
+    else {
+      alert("Not found!");
+    }
+    return false;
+}
+			</script>
+		</head>
+		<body>
+      <script type="text/javascript">
+    changeColor(sessionStorage.getItem('clr'));
+  </script>
+              <form class="tstclass" onsubmit="return search()">
+  <input type="search" id="srchbx" placeholder="Enter the name of content..."/>
+  <input type="submit" value="Search"/>
+</form>
+			<div class="rotate">
+      <table>
+        <tr>
+          <td>
+
+				<img src="p/noika.jpeg" width="200px" onclick="togglepopup1()">
+				<div class="popup" id = "popup-1">
+				<div class="overlay"></div>
+				<div class="content">
+					<div class="close-btn" onclick="togglepopup1()">&times;</div>
+					<h1>nokia 9 pureview </h1>
+					<img src="p/noika.jpeg" width="200px" >
+					<ul>
+						<li>processor:Octa-core (4x2.8 GHz Kryo 385 Gold & 4x1.7 GHz Kryo 385 Silver)</li>
+						<li>Internal storage:128GB</li>
+						<li>Rear camera:	12-megapixel + 12-megapixel (f/1.82) + 12-megapixel (f/1.82) + 12-megapixel (f/1.82) + 12-megapixel (f/1.82)</li>
+						<li>sensors:Fingerprint (under display, optical), accelerometer, gyro, proximity, compass, barometer</li>
+						
+					</ul>
+					<br><br>
+					
+					<h4>13,000.00EGP</h4>
+				</div>
+			</div>
+					<h3 onclick="togglepopup1()">nokia 9 pureview</h3>
+					<h4>13,000.00EGP</h4>
+              
+              
+				  
+            </td>
+            <td>
+              <img src="p/h.jpeg" width="200px"onclick="togglepopup2()">
+				  <div class="popup" id="popup-2">
+				<div class="overlay"></div>
+				<div class="content">
+					<div class="close-btn" onclick="togglepopup2()">&times;</div>
+					<h1>huawei y9</h1>
+					 <img src="p/h.jpeg" width="200px">
+					 <ul>
+								<li>Processor: Kirin 710 eight core </li>
+								<li>Storage / RAM: 64 GB with 4 GB RAM</li>
+								<li>Camera: Dual rear 13 + 2 MB. Double front 16 + 2 mb.</li>
+								<li>Screen: 6.5 inches FHD + with a notch</li>
+								<li>Operating system: Android Oreo 8.1</li>
+								<li>Battery: 4000 mAh</li>
+							</ul>
+					 <br><br>
+					  <h4>3,299.00EGP</h4>
+					  	</div>
+			</div>
+					 
+                <h3 onclick="togglepopup2()"> huawei y9</h3>
+                <h4>3,299.00EGP</h4>
+              </td>
+              <td>
+                <img src="p/i%20phone%2011%20pro.jpeg" width="200px"onclick="togglepopup3()">
+					  <div class="popup" id="popup-3">
+				<div class="overlay"></div>
+				<div class="content">
+					<div class="close-btn" onclick="togglepopup3()">&times;</div>
+					<h1>IPhone 11 pro</h1>
+					<img src="p/i%20phone%2011%20pro.jpeg" width="200px">
+					<ul>
+								<li>Processor: hexa-core Apple A13 Bionic </li>
+								<li>Storage / RAM: 64/256/512 GB with 4 GB RAM</li>
+								<li>Storage / RAM: 64/256/512 GB with 4 GB RAM</li>
+								<li>Screen: 5.8 inches, with a resolution of 1125 x 2436, with a large notch</li>
+								<li>Operating system: 13 IOS</li>
+								<li>Battery : 3046 mA</li>
+							</ul>
+							<br><br>
+							<h4>22,000.00EGP</h4>
+						</div>
+				</div>
+                    <h3 onclick="togglepopup3()"> IPhone 11 pro</h3>
+                  <h4>22,000.00EGP</h4>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="p/lenovo%20k6.jpeg" width="150px" onclick="togglepopup4()">
+						  <div class="popup" id="popup-4">
+				<div class="overlay"></div>
+				<div class="content">
+					<div class="close-btn" onclick="togglepopup4()">&times;</div>
+					<h1>lenovo k6</h1>
+					<img src="p/lenovo%20k6.jpeg" width="150px">
+					<ul>
+								<li>Processor: Octa core with a frequency of 1.4 GHz </li>
+								<li>Storage / RAM: 16/32 GB & 2 GB RAM</li>
+								<li>Camera: 13 MB rear / front 8 MB</li>
+								<li>Screen: 5.0 inches and a resolution of 1080 x 1920 pixels</li>
+								<li>Operating system: Android Marshmallow v6.0</li>
+								<li>Battery: 3000 mAh</li>
+							</ul>
+							<br><br>
+							<h4>2,399.00EGP</h4>
+						</div>
+					</div>
+                    <h3 onclick="togglepopup4()"> lenovo k6</h3>
+                   
+                    <h4>2,399.00EGP</h4>
+                  </td>
+                  <td>
+                    <img src="p/a%2070.jpeg" width="200px" onclick="togglepopup5()">
+						  	  <div class="popup" id="popup-5">
+				<div class="overlay"></div>
+				<div class="content">
+					<div class="close-btn" onclick="togglepopup5()">&times;</div>
+					<h1>samsung galaxy A70</h1>
+					 <img src="p/a%2070.jpeg" width="200px">
+					 <ul>
+						<li>processor:Octa-core (2x2.0 GHz Kryo 460 Gold & 6x1.7 GHz Kryo 460 Silver)</li>
+						<li>storage :Size	6.7 inches, 108.4 cm2 (~86.0% screen-to-body ratio</li>
+						<li>camera:32 MP, f/1.7, 26mm (wide), 1/2.8", 0.8µm, PDAF
+8 MP, f/2.2, 12mm (ultrawide), 1/4.0", 1.12µm
+5 MP, f/2.2, (depth)</li>
+						<li>Sensors:	Fingerprint (under display, optical), accelerometer, gyro, proximity, compass
+ 	ANT+
+Bixby natural language commands and dictation</li>
+						
+					 </ul>
+					 <br><br>
+					 <h4>4,900.00EGP </h4>
+						</div>
+					</div>
+                      <h3 onclick="togglepopup5()">samsung galaxy A70 </h3>
+                      <h4>4,900.00EGP </h4>
+                    </td>
+                    <td>
+                      <img src="p/a%2020.jpeg" width="200px" onclick="togglepopup6()">
+							 <div class="popup" id="popup-6">
+							<div class="overlay"></div>
+							<div class="content">
+					<div class="close-btn" onclick="togglepopup6()">&times;</div>
+					<h1>samsung galaxy A20</h1>
+					<img src="p/a%2020.jpeg" width="200px">
+					<ul>
+						<li>processor:Octa-core (2x1.6 GHz Cortex-A73 & 6x1.35 GHz Cortex-A53)</li>
+						<li>storage:6.4 inches, 100.5 cm2 (~85.0% screen-to-body ratio</li>
+						<li>camera:13 MP, f/1.9, 28mm (wide), AF
+5 MP, f/2.2, 12mm (ultrawide)</li>
+						<li>Sensors:Fingerprint (rear-mounted), accelerometer, gyro, proximity, compass</li>
+					</ul>
+					<br><br>
+					 <h4>3,100.00EGP</h4>
+					</div>
+				</div>			
+                        <h3 onclick="togglepopup6()">samsung galaxy A20 </h3>
+                        <h4>3,100.00EGP</h4>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <img src="p/reno%202.jpeg" width="200px" onclick="togglepopup7()">
+								 <div class="popup" id="popup-7">
+							<div class="overlay"></div>
+							<div class="content">
+					<div class="close-btn" onclick="togglepopup7()">&times;</div>
+					<h1> Oppo RENO2</h1>
+					 <img src="p/reno%202.jpeg" width="200px">
+					 <ul>
+								<li>Processor: Snapdragon 730G eight core, 8 nano technology </li>
+								<li>Storage / RAM: 256 GB with 8 GB RAM</li>
+								<li>Camera: Quad rear 48 + 13 + 8 + 2 MB. Front / 16 MB.</li>
+								<li>Screen: 6.5 inches, FHD</li>
+								<li>Operating system: Android 9.0</li>
+								<li>Battery: 4000 mAh</li>
+							</ul>
+					 <br><br>
+					 <h4> 7,999.00EGP</h4>
+							</div>
+								 </div>
+								 
+                         <h3 onclick="togglepopup7()">Oppo RENO2 </h3>
+                          <h4> 7,999.00EGP</h4>
+                        </td>
+                        <td>
+                          <img src="p/releme%203%20pro.jpeg" width="150px" onclick="togglepopup8()">
+								  	 <div class="popup" id="popup-8">
+							<div class="overlay"></div>
+							<div class="content">
+					<div class="close-btn" onclick="togglepopup8()">&times;</div>
+					 <h1>Realme 3 pro</h1>
+					  <img src="p/releme%203%20pro.jpeg" width="150px"onclick="togglepopup8()">
+					  	<ul>
+								<li>processor : Octa-core Snapdragon 710 10 Nano </li>
+								<li>storage : RAM: 64/128 GB, 4/6 GB RAM</li>
+								<li>Camera: Dual rear 16 + 5 MB. / Front 25 mb</li>
+								<li>Screen: 6.3 inches, with a small FHD + notch</li>
+								<li>Android system: 9 and supported to dual SMS and wifi and bluetooth</li>
+								<li>Battery: 4045 mA</li>
+							</ul>
+						<br><br>
+						<h4>3,000.00EGP</h4>
+							</div>
+									 </div>
+									 
+                             <h3 onclick="togglepopup8()">Realme 3 pro </h3>
+                            <h4>3,000.00EGP</h4>
+                          </td>
+                          <td>
+                            <img src="p/releme%206%20oro.jpeg" width="200px" onclick="togglepopup9()">
+									   	 <div class="popup" id="popup-9">
+							<div class="overlay"></div>
+							<div class="content">
+					<div class="close-btn" onclick="togglepopup9()">&times;</div>
+					<h1>Realme 6 pro</h1>
+					 <img src="p/releme%206%20oro.jpeg" width="200px">
+					 <ul>
+								<li>Processor: Snapdragon 730G eight core, 8 nano technology </li>
+								<li>Storage / RAM: 256 GB with 8 GB RAM</li>
+								<li>Camera: Quad rear 48 + 13 + 8 + 2 MB. Front / 16 MB.</li>
+								<li>Screen: 6.5 inches, FHD</li>
+								<li>Operating system: Android 9.0</li>
+								<li>Battery: 4000 mAh</li>
+							</ul>
+					 <br><br>
+					 <h4>5,400.00EGP</h4>
+							</div>
+											 </div>
+											 
+                              <h3 onclick="togglepopup9()">Realme 6 pro </h3>
+                              <h4>5,400.00EGP</h4>
+                            </td>
+                          </tr>
+                        </table>
+                        </div>
+					<aside>
+
+            <g class="Menu">
+                                  <button class="Buttons" onclick="window.location.href='Home.html'">Home</button>
+                                  <button class="Buttons" onclick="window.location.href='mainForLaptops.html'">Laptops</button>
+                                  <button class="Buttons" onclick="window.location.href='mainForMobiles.html'">Mobiles</button>
+                                  <button class="Buttons" onclick="window.location.href='contactUs.html'">Contact us</button>
+                                  <button class="Buttons" onclick="window.location.href='logOut.html'">Log out</button>
+                                </g>
+					</aside>
+				<header>
+				<div class="Logo">
+					<img src="popMapLogo.svg" width=200px>
+					</div>
+					<div class="MobileLogo">
+						<img src="MobileBackground.svg" width="100px">
+							<h1>Mobile section</h1>
+						</div>
+			</header>
+				</body>
+			</html>

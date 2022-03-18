@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <title>Contact us</title>
+      <style>
+      body
+      {
+      
+
+        font-family: Tajawal;
+      }
+      .Logo
+      {
+       padding: 4px 100% 3px 4px;
+       position: fixed;
+       top: 0%;
+       left: 0%;
+       transform: translate(0% , 0%);
+       background-color: #d49a89;
+
+      }
+
+   .ContactUs h1
+   {
+     top: 0%;
+     left: 0%;
+     transform: translate(100% , -200%);
+     text-shadow: -10px 10px 15px;
+     color: #557571;
+   }
+   .Menu
+   {
+     padding: 10px 10px 350px 10px;
+     position: fixed;
+     top: 0%;
+     left: 0%;
+     text-align: center;
+     transform: translate(0% , 17.25%);
+     color: #d49a89;
+     background-color: #557571;
+   }
+   .Buttons{
+     padding: 10px 10px 10px 10px;
+     display: block;
+     top: 0%;
+     left: 0%;
+     transform: translate(0px , 0px);
+     text-align: center;
+     color: #d49a89;
+     background-color: #557571;
+     border: 0px;
+     cursor: pointer;
+     font-family: Tajawal;
+     font-size: 24px;
+     font-weight: bold;
+     outline: 0;
+   }
+   .box
+    {
+      width: 600px;
+      padding:  10px;
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      transform: translate(80% , 20%);
+      background: none;
+      text-align: left;
+    }
+    .box h1
+    {
+      color: black;
+      text-transform: uppercase;
+
+    }
+    .box h2
+    {
+      text-align: left;
+      margin-bottom: 0px;
+    }
+    .box input[type="text"], textarea
+    {
+      border: 0;
+      background: none;
+      display: block;
+      text-align: left;
+      border: 2px solid #707070;
+      padding: 20px;
+      width: 350px;
+      outline: none;
+      color: black;
+      border-radius: 24px;
+      transition: 0.1s;
+      padding-left: 20;
+      height: 1px;
+  }
+  textarea
+  {
+    resize: none;
+    height: 70px;
+  }
+    .box input[type="text"]:focus , textarea:focus
+    {
+      border: 4px solid #707070;
+      border-radius: 30px;
+    }
+    .box input[type="submit"]
+    {
+      font-size: 16px;
+      font-weight: bold;
+      font-family: Tajawal;
+      border: 0;
+      background: none;
+      display: block;
+      margin: 30px auto;
+      text-align: center;
+      border: 2px solid #707070;
+      padding: 14px 5px;
+      width: 90px;
+      outline: none;
+      color: black;
+      border-radius: 30px;
+      transition: 0.25s;
+      cursor: pointer;
+      transform: translate(-100% , 0%);
+    }
+    .box input[type="submit"]:hover
+    {
+      color: white;
+      border-color: #2ecc71;
+      background-color: #2ecc71;
+    }
+   </style>
+   <script type="text/javascript">
+      function Validation () {
+        // body...
+        if (document.getElementById('email').value.trim()=="")
+        {
+          alert("Email textbox is empty!!");
+          return false;
+        }
+        else if (document.getElementById('prblm').value.trim()=="")
+        {
+          alert("Address textbox is empty!!");
+          return false;
+        }
+        else if (document.getElementById('txtbx').value.trim()=="")
+        {
+          alert("Details textbox is empty!!");
+          return false;
+        }
+        else
+        {
+          return true;
+        }
+      }
+
+    function changeColor(color){
+      document.bgColor=color;
+    }
+
+    </script>
+    </head>
+    <body>
+      <script type="text/javascript">
+         changeColor(sessionStorage.getItem('clr'));
+      </script>
+      <form class="box" onsubmit="return Validation()" action="Home.html">
+            <h1>Fill this form</h1>
+            <h2>Email</h2>
+            <input type="text" id='email' placeholder="Your email..."  />
+            <h2>What do you need ?</h2>
+            <input type="text" id='prblm' placeholder="Address ..."  />
+            <h2>Talk about what you need in details</h2>
+            <textarea type="text" id="txtbx" placeholder="Talk about what you need in details..."></textarea>
+            <input type="submit" value="Submit"/>
+          </form>
+          <aside>
+              <g class="Menu">
+                                  <button class="Buttons" onclick="window.location.href='Home.html'">Home</button>
+                                  <button class="Buttons" onclick="window.location.href='mainForLaptops.html'">Laptops</button>
+                                  <button class="Buttons" onclick="window.location.href='mainForMobiles.html'">Mobiles</button>
+                                  <button class="Buttons" onclick="window.location.href='contactUs.html'">Contact us</button>
+                                  <button class="Buttons" onclick="window.location.href='logOut.html'">Log out</button>
+                                </g>
+       </aside>
+        <header>
+      <div class="Logo">
+        <img src="popMapLogo.svg" width=200px>
+        </div>
+          </header>
+     </body>
+</html>

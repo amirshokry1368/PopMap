@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <title>Home</title>
+      <style>
+      body
+      {
+        
+        width:45%;
+        font-family: Tajawal;
+       
+      }
+      .Logo
+      {
+       padding: 4px 100% 3px 4px;
+       position: fixed;
+       top: 0%;
+       left: 0%;
+       transform: translate(0% , 0%);
+       background-color: #d49a89;
+       z-index: 1;
+      
+      }
+
+   .ContactUs h1
+   {
+     top: 0%;
+     left: 0%;
+     transform: translate(100% , -200%);
+     text-shadow: -10px 10px 15px;
+     color: #557571;
+   }
+   .Menu
+   {
+     padding: 10px 10px 350px 10px;
+     position: fixed;
+     top: 0%;
+     left: 0%;
+     text-align: center;
+     transform: translate(0% , 17.25%);
+     color: #d49a89;
+     background-color: #557571;
+   }
+   .Buttons{
+     padding: 10px 10px 10px 10px;
+     display: block;
+     top: 0%;
+     left: 0%;
+     transform: translate(0px , 0px);
+     text-align: center;
+     color: #d49a89;
+     background-color: #557571;
+     border: 0px;
+     cursor: pointer;
+     font-family: Tajawal;
+     font-size: 24px;
+     font-weight: bold;
+     outline: 0;
+   }
+.LaptopsSlideShow
+{
+  top: 0%;
+  left: 0%;
+ transform: translate(190% , 135%);
+ position: absolute;
+
+background-color: : #f4f4f4;
+width: 25%;
+}
+.LaptopsSlideShow h2
+{
+  top: 0%;
+  left: 0%;
+ transform: translate(0% , -130%);
+ color: red;
+
+}
+.LaptopsSlideShow h1
+{
+  top: 0%;
+  left: 0%;
+ transform: translate(0% , -80%);
+ font-size: 25px
+
+}
+.content
+{
+ top: 0%;
+ left: 0%;
+ position: absolute;
+ transform: translate(23% , 25%);
+ width:70% ;
+ height:80%;
+ font-size: 24px;
+ z-index: 0;
+
+}
+li
+{
+font-weight: bold;
+
+}
+.MobileSlideShow
+{
+  top: 0%;
+  left: 0%;
+ transform: translate(190% , 320%);
+ position: absolute;
+width: 25%;
+
+}
+.MobileSlideShow h1
+{top: 0%;
+  left: 0%;
+ transform: translate(6% , -50%);
+ font-size: 25px
+
+}
+
+.MobileSlideShow h2
+{
+  top: 0%;
+  left: 0%;
+ transform: translate(6% , -100%);
+ color: red;
+}
+
+
+
+   </style>
+   <script type="text/javascript">
+
+    function changeColor(color){
+      document.bgColor=color;
+    }
+
+ </script>
+    </head>
+    <body >
+
+<script type="text/javascript">
+    changeColor(sessionStorage.getItem('clr'));
+  </script>
+
+    <header>
+      <div class="Logo">
+        <img src="popMapLogo.svg" width=200px>
+        </div>
+        <div class="ContactUs">
+            <h1>Laptop section</h1>
+          </div>
+  
+          </header>
+          <aside>
+              <g class="Menu">
+                                  <button class="Buttons" onclick="window.location.href='Home.html'">Home</button>
+                                  <button class="Buttons" onclick="window.location.href='mainForLaptops.html'">Laptops</button>
+                                  <button class="Buttons" onclick="window.location.href='mainForMobiles.html'">Mobiles</button>
+                                  <button class="Buttons" onclick="window.location.href='contactUs.html'">Contact us</button>
+                                  <button class="Buttons" onclick="window.location.href='logOut.html'">Log out</button>
+                                </g>
+       </aside>
+
+
+<div class="LaptopsSlideShow">
+
+<img src="Laptops/ASUS TUF FA506IU-AL019T.jpg" id="LImgPlace" width="200px">
+  <h1 id="LnmPlace">ASUS TUF FA506IU</h3>
+  <h2 id="LprPlace">19,999.00EGP</h4>
+</div>
+
+<script type="text/javascript">
+  var LimageArray=["Laptops/ASUS TUF FA506IU-AL019T.jpg","Laptops/ASUS -TUF Gaming.jpg","Laptops/Dell Inspiron 5593 .jpg","Laptops/Dell Inspiron G5 5587.jpg","Laptops/HP 15-da2007ne.jpg","Laptops/Lenovo IdeaPad 3.jpg","Laptops/Lenovo Legion Y530.jpg","Laptops/msi GF63 Thin 9SC.jpg","Laptops/MSI GF75.jpg"];
+  var LnameArray=["ASUS TUF FA506IU","ASUS -TUF Gaming","Dell Inspiron 5593","Inspiron G5 5587","HP 15-da2007ne","Lenovo IdeaPad 3","Lenovo Legion Y530","msi GF63 Thin 9SC","MSI GF75"];
+  var LpriceArray=["19,999.00EGP","12,999.00EGP","14,499.00EGP","16,999.00EGP","8,399.00EGP","7,299.00EGP","18,999.00EGP","16,699.00EGP","18,999.00EGP"];
+  var LimageIndex=0;
+  function LChangePicture() {
+    LimageIndex++;
+    document.getElementById('LImgPlace').setAttribute("src",LimageArray[LimageIndex-1]);
+    document.getElementById('LnmPlace').innerHTML=LnameArray[LimageIndex-1];
+    document.getElementById('LprPlace').innerHTML=LpriceArray[LimageIndex-1];
+    if (LimageIndex == LimageArray.length) {LimageIndex=0;}
+    setTimeout(LChangePicture,1000);
+  }
+  LChangePicture();
+</script>
+
+
+<div class="MobileSlideShow">
+<img src="p/noika.jpeg" id="MImgPlace" width="200px">
+  <h1 id="MnmPlace">nokia 9 pureview</h3>
+  <h2 id="MprPlace">13,000.00EGP</h4>
+</div>
+
+<script type="text/javascript">
+  var MimageArray=["p/noika.jpeg","p/h.jpeg","p/i%20phone%2011%20pro.jpeg","p/a%2070.jpeg","p/a%2020.jpeg","p/reno%202.jpeg","p/releme%203%20pro.jpeg","p/releme%206%20oro.jpeg"];
+  var MnameArray=["nokia 9 pureview","huawei y9","IPhone 11 pro","samsung galaxy A70","samsung galaxy A20","Oppo RENO2","Realme 3 pro","Realme 6 pro"];
+  var MpriceArray=["13,000.00EGP","3,299.00EGP","22,000.00EGP","4,900.00EGP","3,100.00EGP","7,999.00EGP","3,000.00EGP","5,400.00EGP"];
+  var MimageIndex=0;
+  function MChangePicture() {
+    MimageIndex++;
+    if (MimageArray[MimageIndex-1]=="p/releme%203%20pro.jpeg") {
+      document.getElementById('MImgPlace').setAttribute("width","150px");
+    }
+    else
+    {document.getElementById('MImgPlace').setAttribute("width","200px");
+      
+    }
+      document.getElementById('MImgPlace').setAttribute("src",MimageArray[MimageIndex-1]);
+      document.getElementById('MnmPlace').innerHTML=MnameArray[MimageIndex-1];
+      document.getElementById('MprPlace').innerHTML=MpriceArray[MimageIndex-1];
+      if (MimageIndex == MimageArray.length) {MimageIndex=0;}
+      setTimeout(MChangePicture,1000);
+  }
+  MChangePicture();
+</script>
+<div class="content">
+<h1 style="text-shadow: -10px 10px 30px;">Welcome <span id="heading">Admin</span>...!</h1>
+  <script type="text/javascript">
+    document.getElementById('heading').innerHTML=sessionStorage.getItem('fn');
+  </script>
+<p>
+it is a description about the site.......<br>
+in our website we have two sections, we hope that you find what you want.
+<ol>
+  <li >Laptops</li>
+   <p>
+        In the laptops section, you can look at many loptops, and in order to be able to know the details of each laptop, you can click on any laptop picture or name to check information , price about laptops that we have.
+   </p>
+<br><br><br><br><br><br><br><br><br><br>
+
+  <li>Mobiles</li>
+  <p>
+  In the mobile phone section, you can look at many phones, and in order to be able to know the details of each mobile phone, you can click on any phone picture or name to check information , price about smart phones that we have.
+  </p>
+  <br><br><br><br><br><br><br><br><br><br>
+</ol>
+
+</div>
+
+
+
+</p>
+     </body>
+</html>

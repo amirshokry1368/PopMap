@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+      <title>Admin Page</title>
+      <style>
+      body
+      {
+        
+
+        font-family: Tajawal;
+      }
+      .Logo
+      {
+       padding: 4px 100% 3px 4px;
+       position: fixed;
+       top: 0%;
+       left: 0%;
+       transform: translate(0% , 0%);
+       background-color: #d49a89;
+
+      }
+
+   
+   .Menu
+   {
+     padding: 10px 10px 350px 10px;
+     position: fixed;
+     top: 0%;
+     left: 0%;
+     text-align: center;
+     transform: translate(0% , 17.25%);
+     color: #d49a89;
+     background-color: #557571;
+   }
+   .Buttons{
+     padding: 10px 10px 10px 10px;
+     display: block;
+     top: 0%;
+     left: 0%;
+     transform: translate(0px , 0px);
+     text-align: center;
+     color: #d49a89;
+     background-color: #557571;
+     border: 0px;
+     cursor: pointer;
+     font-family: Tajawal;
+     font-size: 24px;
+     font-weight: bold;
+     outline: 0;
+   }  
+   .settingButton input[type="button"]
+      {
+        font-size: 16px;
+        font-weight: bold;
+        font-family: Tajawal;
+        border: 0;
+        background: none;
+        margin: 20px;
+        text-align: center;
+        border: 2px solid #707070;
+        padding: 14px 5px;
+        width: 90px;
+        outline: none;
+        color: black;
+        border-radius: 30px;
+        transition: 0.25s;
+        cursor: pointer;
+      }
+      .settingButton input[type="button"]:hover
+      {
+        color: white;
+        border-color: #ff4d4d;
+        background-color: #ff4d4d;
+      }
+      .internalSettingsButtons input[type="button"]
+      {
+        font-size: 16px;
+        font-weight: bold;
+        font-family: Tajawal;
+        border: 0;
+        background: none;
+        margin: 20px;
+        text-align: center;
+        border: 2px solid #707070;
+        padding: 14px 5px;
+        width: 90px;
+        outline: none;
+        color: black;
+        border-radius: 30px;
+        transition: 0.25s;
+        cursor: pointer;
+        top: 0%;
+        left: 0%;
+        transform: translate(0%, -30%);
+      }
+      .internalSettingsButtons input[type="button"]:hover
+      {
+        color: white;
+        border-color: #ff4d4d;
+        background-color: #ff4d4d;
+      }
+
+   .popup .overlay {
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:105.38%;
+  height:111%;
+  background:rgba(0,0,0,0.7);
+  z-index:1;
+  display:none;
+  transform: translate(-5% , -10%);
+}
+
+.popup .content {
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-100%) scale(0); 
+  width:750px;
+  background:#fff;
+  z-index:2;
+  text-align:center;
+  padding:20px;
+  box-sizing:border-box;
+  font-family:Tajawal;
+}
+
+.popup .close-btn {
+  cursor:pointer;
+  position:fixed;
+  right:20px;
+  top:20px;
+  width:30px;
+  height:30px;
+  background:#222;
+  color:#fff;
+  font-size:25px;
+  font-weight:600;
+  line-height:30px;
+  text-align:center;
+  border-radius:50%;
+}
+
+.popup.active .overlay {
+  display:block;
+}
+
+.popup.active .content {
+  transition:all 300ms ease-in-out;
+  transform:translate(-50%,-50%) scale(1);
+}
+   </style>
+
+   <script type="text/javascript">
+function changeColor(color){
+
+
+document.bgColor=color;
+sessionStorage.setItem("clr",color);
+
+}
+function togglePopup(){
+  document.getElementById("popup-1").classList.toggle("active");
+}
+function togglePopup2(){
+  document.getElementById("popup-2").classList.toggle("active");
+}
+function togglePopup3(){
+  document.getElementById("popup-3").classList.toggle("active");
+}
+   </script>
+
+
+
+
+
+    </head>
+    <body>
+              <section style="transform: translate(170px, 120px);width: 1130px; position: absolute; padding: 20px 20px 20px 20px;">
+                <h1 style="font-size: 40px; text-align: center; margin-top: 0px;">Page settings</h1>
+                <br><br>
+                <div class="popup" id="popup-1">
+                <div class="overlay"></div>
+                <div class="content" style="height:100px;">
+                  <div class="close-btn" onclick="togglePopup()">&times;</div>
+                    <div class="internalSettingsButtons">
+                    <input type="button" value="silver" onclick="changeColor('silver')"/>
+                    <input type="button" value="slate" onclick="changeColor('slate')"/>
+                    <input type="button" value="green" onclick="changeColor('green')"/>
+                    <input type="button" value="blue" onclick="changeColor('blue')"/>
+                    <input type="button" value="white" onclick="changeColor('white')"/>
+                    </div>
+                  </div>
+                </div>
+              <div class="settingButton" style="transform: translate(0px, 0px);">
+                <h3 style="font-size: 24px;">Background Colors</h3>
+                <h4 style="font-size: 20px;">By this button you can change background color: </h4>
+                <input type="button" onclick="togglePopup()" value="Colors" style="transform: translate(430px, -87px);"></div>
+                <div class="popup" id="popup-2">
+                <div class="overlay"></div>
+                <div class="content" style="height:340px;">
+                  <div class="close-btn" onclick="togglePopup2()">&times;</div>
+                    <div class="internalSettingsButtons">
+                      <br>
+                      <p id="paragraph">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                      <input type="button" value="Small" onclick="document.getElementById('paragraph').style.fontSize='12px';"/>
+                      <input type="button" value="Medium" onclick="document.getElementById('paragraph').style.fontSize='15px';"/>
+                      <input type="button" value="Large" onclick="document.getElementById('paragraph').style.fontSize='20px';"/>
+                    </div>
+                  </div>
+                </div>
+              <div class="settingButton" style=" transform: translate(0px, 0px);">
+                <h3 style="font-size: 24px;">Font sizes</h3>
+                <h4 style="font-size: 20px;">By this button you can try to change font sizes: </h4>
+                <input type="button" onclick="togglePopup2()" value="Font size" style="transform: translate(430px, -87px);">
+                </div>
+                <div class="popup" id="popup-3">
+                <div class="overlay"></div>
+                <div class="content" style="height:340px;">
+                  <div class="close-btn" onclick="togglePopup3()">&times;</div>
+                    <div class="internalSettingsButtons" style="float: center;">
+                      <br>
+                      <img id="mg" src="popMapLogo.svg" width="100px"> <br>
+                      <input type="button" value="Small" onclick="document.getElementById('mg').style.width='100px';"/>
+                      <input type="button" value="Medium" onclick="document.getElementById('mg').style.width='200px';"/>
+                      <input type="button" value="Large" onclick="document.getElementById('mg').style.width='300px';"/>
+                    </div>
+                  </div>
+                </div>
+              <div class="settingButton" style=" transform: translate(0px, 0px);">
+                <h3 style="font-size: 24px;">Image sizes</h3>
+                <h4 style="font-size: 20px;">By this button you can try to change image sizes: </h4>
+                <input type="button" onclick="togglePopup3()" value="Image size" style="transform: translate(430px, -87px);">
+                </div>
+              </section>
+          <aside>
+              <g class="Menu">
+            <button class="Buttons" onclick="window.location.href='Home.html'">Home</button>
+            <button class="Buttons" onclick="window.location.href='mainForLaptops.html'">Laptops</button>
+            <button class="Buttons" onclick="window.location.href='mainForMobiles.html'">Mobiles</button>
+            <button class="Buttons" onclick="window.location.href='contactUs.html'">Contact us</button>
+            <button class="Buttons" onclick="window.location.href='admin.html'">Admin mode</button>
+            <button class="Buttons" onclick="window.location.href='logOut.html'">Log out</button>
+        </g>
+       </aside>
+       <header>
+        <div class="Logo">
+          <img src="popMapLogo.svg" width=200px>
+          </div>
+            </header>
+
+
+
+     </body>
+</html>

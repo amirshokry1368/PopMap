@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <title>Laptops</title>
+      <style>
+      body
+      {
+        
+
+        font-family: Tajawal;
+      }
+      .Logo
+      {
+       padding: 4px 100% 3px 4px;
+       position: fixed;
+       top: 0%;
+       left: 0%;
+       transform: translate(0% , 0%);
+       background-color: #d49a89;
+
+      }
+
+      .LaptopLogo
+      {
+
+       padding: 10px;
+       position: fixed;
+       top: 0%;
+       left: 0%;
+       transform: translate(200% , 0%);
+
+
+      }
+   .LaptopLogo h1
+   {
+     top: 0%;
+     left: 0%;
+     transform: translate(100% , -200%);
+     text-shadow: -10px 10px 15px;
+     color: #557571;
+   }
+   .Menu
+   {
+     padding: 0% 10px 100% 10px;
+     position: fixed;
+     top: 0%;
+     left: 0%;
+     text-align: center;
+     transform: translate(0% , 7%);
+     color: #d49a89;
+     background-color: #557571;
+   }
+   .Buttons{
+     padding: 10px 10px 10px 10px;
+     display: block;
+     top: 0%;
+     left: 0%;
+     transform: translate(0px , 0px);
+     text-align: center;
+     color: #d49a89;
+     background-color: #557571;
+     border: 0px;
+     cursor: pointer;
+     font-family: Tajawal;
+     font-size: 24px;
+     font-weight: bold;
+     outline: 0;
+   }
+   table
+   {
+      
+      border-collapse: collapse;
+      width: 88%;
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      transform: translate(160px, 140px);
+   }
+   td
+   {
+      padding-top: 10px;
+      text-align: center;
+   }
+   h3
+   {
+      font-size: 28px;
+      font-weight: bold;
+      margin-top: 0px;
+      margin-bottom: 2px;
+      cursor: pointer;
+   }
+   h4
+   {
+    color: red;
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: -8px;
+   }
+   img
+   {
+    cursor: pointer;
+   }
+
+   .popup .overlay {
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:105.38%;
+  height:111%;
+  background:rgba(0,0,0,0.7);
+  z-index:1;
+  display:none;
+  transform: translate(-5% , -10%);
+}
+
+.popup .content {
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%) scale(0);
+  background:#fff;
+  width:750px;
+  height:750px;
+  z-index:2;
+  text-align:center;
+  padding:20px;
+  box-sizing:border-box;
+  font-family:Tajawal;
+}
+
+.popup .close-btn {
+  cursor:pointer;
+  position:fixed;
+  right:20px;
+  top:20px;
+  width:30px;
+  height:30px;
+  background:#222;
+  color:#fff;
+  font-size:25px;
+  font-weight:600;
+  line-height:30px;
+  text-align:center;
+  border-radius:50%;
+}
+
+.popup.active .overlay {
+  display:block;
+}
+
+.popup.active .content {
+  transition:all 300ms ease-in-out;
+  transform:translate(-50%,-70%) scale(1);
+}
+ul , li
+{
+text-align: left;
+}
+
+
+.rotate img{
+
+  transition: all 1.5s ease-in-out;
+
+}
+.rotate img:hover{
+  transform:rotateY(360deg);
+}
+
+.tstclass
+{
+position: fixed;
+   top: 0%;
+      left: 0%;
+      transform: translate(1050px, 50px);
+      z-index: 3;
+
+}
+  .tstclass input[type="submit"]
+    {
+      font-size: 16px;
+      font-weight: bold;
+      font-family: Tajawal;
+      border: 0;
+      background: none;
+      display: block;
+      margin: 30px auto;
+      text-align: center;
+      border: 2px solid #707070;
+      padding: 3px 0px;
+      width: 90px;
+      outline: none;
+      color: black;
+      border-radius: 30px;
+      transition: 0.25s;
+      cursor: pointer;
+      position: fixed;
+   top: 0%;
+      left: 0%;
+      transform: translate(180px, -36px);
+      z-index: 3;
+     background-color: white;
+
+    }
+.tstclass input[type="submit"]:hover
+    {
+      color: white;
+      border-color: #2ecc71;
+      background-color: #2ecc71;
+    }
+  .tstclass input[type="search"]
+    {
+        border: 0;
+      background: white;
+      display: block;
+      margin: 10px auto;
+      text-align: left;
+      border: 2px solid #707070;
+      padding: 14px;
+      width: 230px;
+      outline: none;
+      color: black;
+      border-radius: 24px;
+      transition: 0.1s;
+      padding-left: 20;
+      position: fixed;
+        top: 0%;
+      left: 0%;
+      transform: translate(-55px, -22px);
+  }
+    </style>
+      <script type="text/javascript">
+      function togglePopup(){
+  document.getElementById("popup-1").classList.toggle("active");
+}
+function togglePopup2(){
+  document.getElementById("popup-2").classList.toggle("active");
+}
+function togglePopup3(){
+  document.getElementById("popup-3").classList.toggle("active");
+}
+function togglePopup4(){
+  document.getElementById("popup-4").classList.toggle("active");
+}
+function togglePopup5(){
+  document.getElementById("popup-5").classList.toggle("active");
+}
+function togglePopup6(){
+  document.getElementById("popup-6").classList.toggle("active");
+}
+function togglePopup7(){
+  document.getElementById("popup-7").classList.toggle("active");
+}
+function togglePopup8(){
+  document.getElementById("popup-8").classList.toggle("active");
+}
+function togglePopup9(){
+  document.getElementById("popup-9").classList.toggle("active");
+}
+   
+
+    function changeColor(color){
+      document.bgColor=color;
+    }
+
+
+function search() {
+  // body...
+  if (document.getElementById('srchbx').value=="MSI GF75") 
+    {
+      togglePopup();
+    }
+  else if (document.getElementById('srchbx').value=="Lenovo IdeaPad 3") 
+    {
+      togglePopup2();
+    }
+  else if (document.getElementById('srchbx').value=="Dell Inspiron 5593") 
+    {
+      togglePopup3();
+    }
+  else if (document.getElementById('srchbx').value=="HP 15-da2007ne") 
+    {
+      togglePopup4();
+    }
+  else if (document.getElementById('srchbx').value=="ASUS -TUF Gaming") 
+    {
+      togglePopup5();
+    }
+  else if (document.getElementById('srchbx').value=="ASUS TUF FA506IU") 
+    {
+      togglePopup6();
+    }
+  else if (document.getElementById('srchbx').value=="Lenovo Legion Y530") 
+    {
+      togglePopup7();
+    }
+  else if (document.getElementById('srchbx').value=="GF63 Thin 9SC") 
+    {
+      togglePopup8();
+    }
+  else if (document.getElementById('srchbx').value=="Inspiron G5 5587") 
+    {
+      togglePopup9();
+    }
+    else {
+      alert("Not found!");
+    }
+    return false;
+}
+
+    </script>
+    </head>
+    <body>
+<script type="text/javascript">
+    changeColor(sessionStorage.getItem('clr'));
+  </script>
+           <form class="tstclass" onsubmit="return search()">
+  <input type="search" id="srchbx" placeholder="Enter the name of content..."/>
+  <input type="submit" value="Search"/>
+</form>
+
+
+      <div class="rotate">
+      <table>
+        <tr>
+          <td>
+
+            <img src="Laptops/MSI GF75.jpg" width="200px" onclick="togglePopup()">
+              <div class="popup" id="popup-1">
+                <div class="overlay"></div>
+                <div class="content">
+                  <div class="close-btn" onclick="togglePopup()">&times;</div>
+                  <h1>MSI GF75</h1>
+                  <img src="Laptops/MSI GF75.jpg" width="200px">
+               <ul >
+                 <li>Processor: Intel®️ Core i7-9750H</li>
+                 <li>RAM 16GB DDR4</li>
+  <li>Display 17.3" FHD IPS</li>
+   <li>Display Resolution : 1920 x 1080</li>
+    <li>Display Refresh Rate : 120 Hz thin Bezel</li>
+     <li>VGA NVIDIA®️ GeForce®️ GTX 1650</li>
+
+      <li>Video graphics Memorey : 4GB DDR5</li>
+       <li>Hard Disk Capacity 512GB SSD NVME</li>
+        <li>Battery 3-Cell</li>
+        <li>Warranty 12 month</li>
+  
+               </ul>
+               <br><br>
+
+                    <h4>18,999.00EGP</h4>
+                  </div>
+                </div>
+                <h3 onclick="togglePopup()">MSI GF75</h3>
+                <h4>18,999.00EGP</h4>
+              </td>
+              <td>
+                <img src="Laptops/Lenovo IdeaPad 3.jpg" width="200px" onclick="togglePopup2()">
+                <div class="popup" id="popup-2">
+                <div class="overlay"></div>
+                <div class="content">
+                  <div class="close-btn" onclick="togglePopup2()">&times;</div>
+                  <h1>Lenovo IdeaPad 3</h1>
+                  <img src="Laptops/Lenovo IdeaPad 3.jpg" width="200px">
+                   <ul >
+                 <li>Processor Intel®️ Core™️i3-10110U</li>
+                 <li>CPU Speed : (2C / 4T, 2.1 / 4.1GHz, 4MB)</li>
+                 <li>VGA NVIDIA®️ GeForce®️ MX130-2G</li>
+                 <li>RAM 4GB DDR4 2667MHz</li>
+                 <li>Operating system Dos</li>
+                 <li>Display 15.6” HD</li>
+                 <li>Resolution (1366 x 768) anti-glare</li>
+                 <li>Hard disk capacity  1TB HDD</li>
+                 <li>Battery   2 Cell 35Wh Internal battery</li>
+                 <li>Warranty 12 month</li>
+  
+               </ul>
+               <br><br>
+               <h4>7,299.00EGP</h4>
+                  </div>
+                </div>
+                <div class="popup" id="popup-1">
+                <div class="overlay"></div>
+                <div class="content">
+                  <div class="close-btn" onclick="togglePopup()">&times;</div>
+                  <h1>MSI GF75</h1>
+                  <img src="Laptops/MSI GF75.jpg" width="200px">
+               <ul >
+                 <li>Processor: Intel®️ Core i7-9750H</li>
+                 <li>RAM 16GB DDR4</li>
+  <li>Display 17.3" FHD IPS</li>
+   <li>Display Resolution : 1920 x 1080</li>
+    <li>Display Refresh Rate : 120 Hz thin Bezel</li>
+     <li>VGA NVIDIA®️ GeForce®️ GTX 1650</li>
+
+      <li>Video graphics Memorey : 4GB DDR5</li>
+       <li>Hard Disk Capacity 512GB SSD NVME</li>
+        <li>Battery 3-Cell</li>
+        <li>Warranty 12 month</li>
+  
+               </ul>
+               <br><br>
+
+                    <h4>18,999.00EGP</h4>
+                  </div>
+                </div>
+                  <h3 onclick="togglePopup2()">Lenovo IdeaPad 3</h3>
+                  <h4>7,299.00EGP</h4>
+                </td>
+                <td>
+                  <img src="Laptops/Dell Inspiron 5593 .jpg" width="200px" onclick="togglePopup3()">
+                  <div class="popup" id="popup-3">
+                <div class="overlay"></div>
+                <div class="content">
+                  <div class="close-btn" onclick="togglePopup3()">&times;</div>
+                  <h1>Dell Inspiron 5593 </h1>
+                  <img src="Laptops/Dell Inspiron 5593 .jpg" width="200px">
+               <ul >
+                 <li>Processor Intel®️ Core™️ i7-1065G7 Processor</li>
+                 <li>CPU Speed : (8MB Cache, up to 3.9 GHz)</li>
+  <li>Operating Systems DOS</li>
+   <li>VGA  NVIDIA®️ GeForce®️ MX230 with 4GB GDDR5 graphics memory</li>
+    <li>Display Refresh Rate : 120 Hz thin Bezel</li>
+     <li>Display 15.6-inch FHD</li>
+
+      <li>Anti-glare LED Backlight Non-touch Narrow Border WVA Display</li>
+       <li>Resolution (1920 x 1080) </li>
+        <li>RAM 8GB, DDR4, 2666MHz</li>
+        <li>Hard disk capacity 1TB-SSD256</li>
+        <li>Warranty 12 month</li>
+  
+               </ul>
+               <br><br>
+
+                    <h4>14,499.00EGP</h4>
+                  </div>
+                </div>
+                    <h3 onclick="togglePopup3()">Dell Inspiron 5593</h3>
+                    <h4>14,499.00EGP</h4>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img src="Laptops/HP 15-da2007ne.jpg" width="200px" onclick="togglePopup4()">
+                    <div class="popup" id="popup-4">
+                <div class="overlay"></div>
+                <div class="content">
+                  <div class="close-btn" onclick="togglePopup4()">&times;</div>
+                  <h1>HP 15-da2007ne</h1>
+                  <img src="Laptops/HP 15-da2007ne.jpg" width="200px">
+               <ul >
+                 <li>Processor Intel®️ Core™️ i5-10210U</li>
+                 <li>RAM 16GB DDR4</li>
+                <li>CPU Speed : (1.6 GHz base frequency, up to 4.2 GHz base with Intel®️ Turbo Boost Technology)</li>
+                <li>Display Resolution : 1920 x 1080</li>
+                <li>Core : 6 MB cache, 4 cores</li>
+                <li>Generation 10th</li>
+                <li>RAM 4GB</li>
+                <li>Storage 1 TB</li>
+                <li>VGA  NVIDIA®️ GeForce®️ MX110 </li>
+                <li>Graphic Memory Size 2 GB DDR5</li>
+                <li>Display 15.6  HD</li>
+                <li>Warranty 12 month</li>
+  
+               </ul>
+               <br><br>
+
+                    <h4>8,399.00EGP</h4>
+                  </div>
+                </div>
+                      <h3 onclick="togglePopup4()">HP 15-da2007ne</h3>
+                      <h4>8,399.00EGP</h4>
+                    </td>
+                    <td>
+                      <img src="Laptops/ASUS -TUF Gaming.jpg" width="200px" onclick="togglePopup5()">
+                      <div class="popup" id="popup-5">
+                <div class="overlay"></div>
+                <div class="content">
+                  <div class="close-btn" onclick="togglePopup5()">&times;</div>
+                  <h1>ASUS -TUF Gaming</h1>
+                  <img src="Laptops/ASUS -TUF Gaming.jpg" width="200px">
+               <ul >
+
+                 <li>Processor Details : AMD R7-3750H</li>
+                 <li>RAM 8GB DDR4</li>
+                <li>Video graphics : NVIDIA®️ GeForce®️ GTX 1050</li>
+   <li>Video graphics Memorey : GDDR5 3GB</li>
+    <li>Memory : DDR4 2400MHz SDRAM, 2 x SO-DIMM socket for expansion, up to 32 GB SDRAM,Dual-channel</li>
+     <li>Display 15.6 FHD WV,200NITS,NTSC:45%-NB</li>
+
+      <li>Resolution : 1920 x 1080</li>
+       <li>Display Refresh Rate : 60 Hz</li>
+        <li>Hard Disk Capacity 1TB 54R</li>
+        <li>Warranty 12 month</li>
+  
+               </ul>
+               <br><br>
+
+                    <h4>12,999.00EGP</h4>
+                  </div>
+                </div>
+                        <h3 onclick="togglePopup5()">ASUS -TUF Gaming</h3>
+                        <h4>12,999.00EGP </h4>
+                      </td>
+                      <td>
+                        <img src="Laptops/ASUS TUF FA506IU-AL019T.jpg" width="200px" onclick="togglePopup6()">
+                        <div class="popup" id="popup-6">
+                <div class="overlay"></div>
+                <div class="content">
+                  <div class="close-btn" onclick="togglePopup6()">&times;</div>
+                  <h1>ASUS TUF FA506IU-AL019T</h1>
+                  <img src="Laptops/ASUS TUF FA506IU-AL019T.jpg" width="200px">
+               <ul >
+
+
+                 <li> Processor : AMD®️ Ryzen™️ 7 4800H </li>
+                 <li>CPU Speed : Turbo up to 4.2GHz</li>
+  <li>Operating System : Windows 10</li>
+   <li>RAM : 16 GB</li>
+    <li>Display : 15.6 FHD WV,250NITS,NTSC:45%-NB</li>
+     <li>Resolution : (1920x1080) 144HZ</li>
+
+      <li>VGA : NVIDIA®️ GeForce®️ GTX 1660TI , with 6GB GDDR6 </li>
+       <li>Storage : SSD 1TB</li>
+    
+        <li>Warranty 24 month</li>
+  
+               </ul>
+               <br><br>
+
+                    <h4>19,999.00EGP</h4>
+                  </div>
+                </div>
+                          <h3 onclick="togglePopup6()">ASUS TUF FA506IU</h3>
+                          <h4>19,999.00EGP</h4>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <img src="Laptops/Lenovo Legion Y530.jpg" width="200px" onclick="togglePopup7()">
+                          <div class="popup" id="popup-7">
+                <div class="overlay"></div>
+                <div class="content">
+                  <div class="close-btn" onclick="togglePopup7()">&times;</div>
+                  <h1>Lenovo Legion Y530</h1>
+                  <img src="Laptops/Lenovo Legion Y530.jpg" width="200px">
+               <ul >
+
+                 <li>Processor Intel Core i7‎-8750H / with intel turbo boost</li>
+                 <li>CPU Speed : 2.2 GHz</li>
+  <li>RAM 16 GB ‎(‎1 x 16GB‎)‎ DDR4‎,‎ 2666 MHz</li>
+   <li>Hard Disk Capacity 1TB HDD + 256GB PCIe SSD</li>
+    <li>VGA NVIDIA GeForce GTX 1060 6GB GDDR5</li>
+     <li>Display 15.6‎-inch</li>
+
+      <li>Resolution Full HD ‎(‎1920 x 1080‎)‎ @60Hz</li>
+       <li>Operating System DOS</li>
+        <li>Battery 3 Cell‎,‎ 52.5Wh</li>
+        <li>Warranty 12 month</li>
+  
+               </ul>
+               <br><br>
+
+                    <h4>18,999.00EGP</h4>
+                  </div>
+                </div>
+                            <h3 onclick="togglePopup7()"> Legion Y530</h3>
+                            <h4> 18,999.00EGP</h4>
+                          </td>
+                          <td>
+                            <img src="Laptops/msi GF63 Thin 9SC.jpg" width="200px" onclick="togglePopup8()">
+                            <div class="popup" id="popup-8">
+                <div class="overlay"></div>
+                <div class="content">
+                  <div class="close-btn" onclick="togglePopup8()">&times;</div>
+                  <h1>Mmsi GF63 Thin 9SC</h1>
+                  <img src="Laptops/msi GF63 Thin 9SC.jpg" width="200px">
+               <ul >
+               
+
+                 <li> Processor intel core i7-9750H  </li>
+                 <li>CPU Speed (GHz)2.6 GHz / with intel turbo boost</li>
+  <li>RAM 16GB</li>
+   <li>RAM Type ddr4_sdram</li>
+    <li>VGA GTX 1650 4GB</li>
+     <li>Display 15.6" Inch FHD 60hz thin Bezel</li>
+
+      <li>Resolution 1920x1080 @ 60Hz</li>
+       <li>Hard Disk Capacity 512 SSD NVME</li>
+        <li>Battery 3 Cell , Li-Polymer , 51</li>
+        <li>Warranty 12 month</li>
+  
+               </ul>
+               <br><br>
+
+                    <h4>16,699.00EGP</h4>
+                  </div>
+                </div>
+                              <h3 onclick="togglePopup8()">GF63 Thin 9SC</h3>
+                              <h4>16,699.00EGP</h4>
+                            </td>
+                            <td>
+                              <img src="Laptops/Dell Inspiron G5 5587.jpg" width="200px" onclick="togglePopup9()">
+                              <div class="popup" id="popup-9">
+                <div class="overlay"></div>
+                <div class="content">
+                  <div class="close-btn" onclick="togglePopup9()">&times;</div>
+                  <h1>Dell Inspiron G5 5587</h1>
+                  <img src="Laptops/Dell Inspiron G5 5587.jpg" width="200px">
+               <ul >
+              <li> Processor Intel Core i7-8750H / with intel turbo boost </li>
+                <li> CPU Speed ‎:‎ 2.20 GHz up to 4.10 GHz </li>
+
+                <li>Cores‎:‎ 6</li>
+
+                <li>8th Generation </li>
+
+                <li>Memory 16GB‎,‎ DDR4‎,‎ up to 32GB </li>
+
+              <li>Hard Drive‎:‎ 256GB Solid State Drive ‎(‎Boot‎)‎ + 1TB 5400RPM </li>
+                
+                <li>Hard Drive ‎(‎Storage‎)‎ No </li>
+ 
+                 <li>Graphics Processor‎:‎ NVIDIA®️ GeForce®️ GTX 1050Ti </li>
+
+                <li>Graphics Video RAM‎:‎ 4 GB GDDR5 </li>
+
+               <li>Display 15.6" Full-HD(1920 x 1080) IP S Anti-Glare LED </li>
+                 <li>Processor: Intel®️ Core i7-9750H</li>
+                 
+                <li>Warranty 12 month</li>
+               </ul>
+               <br><br>
+
+                    <h4>16,999.00EGP</h4>
+                  </div>
+                </div>
+                                <h3 onclick="togglePopup9()">Inspiron G5 5587</h3>
+                                <h4>16,999.00EGP</h4>
+                              </td>
+                            </tr>
+                          </table>
+                          </div>
+                              <aside>
+                                <g class="Menu">
+                                  <button class="Buttons" onclick="window.location.href='Home.html'">Home</button>
+                                  <button class="Buttons" onclick="window.location.href='mainForLaptops.html'">Laptops</button>
+                                  <button class="Buttons" onclick="window.location.href='mainForMobiles.html'">Mobiles</button>
+                                  <button class="Buttons" onclick="window.location.href='contactUs.html'">Contact us</button>
+                                  <button class="Buttons" onclick="window.location.href='logOut.html'">Log out</button>
+                                </g>
+                              </aside>
+                              <header>
+                            <div class="Logo">
+                              <img src="popMapLogo.svg" width=200px>
+                              </div>
+                              <div class="LaptopLogo">
+                                <img src="LaptopBackground.svg" width="200px">
+                                  <h1>Laptop section</h1>
+                                </div>
+                              </header>
+                            </body>
+                          </html>
